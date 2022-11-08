@@ -31,12 +31,12 @@ const btnTop = document.querySelector(".btn-top");
 const btnBottom = document.querySelector(".btn-bottom");
 
 
-for (let i = 0; i < arrImg.length; i++) {
+for (let i = 0; i < images.length; i++) {
     const eleImg = document.createElement("img");
     eleImg.src = `${images[i].image}`;
     eleImg.classList.add("slider-img");
 
-    if (images[i].image === 0) {
+    if (i == 0) {
         eleImg.classList.add("d-block");
     }
     sliderImg.append(eleImg);

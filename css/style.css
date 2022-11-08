@@ -50,7 +50,7 @@ body {
     align-items: center;
 }
 
-.btn-top:hover, .btn-bottom:hover {
+.btn-top:hover, .btn-bottom:hover { 
     cursor: pointer;
 }
 
