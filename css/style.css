@@ -16,17 +16,13 @@ body {
     width: 70%;
     height: 80%;
     max-width: 800px;
-    max-height: 400px;
+    max-height: 500px;
     margin: auto;
     background-color: white;
 }
 
 .slider-img {
-    height: 100%;
-    width: 100%;
     display: none;
-    object-fit: cover;
-    object-position: center;
 }
 
 .controls, .container-s-image {
@@ -56,6 +52,8 @@ body {
 
 .d-block {
     display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .small-img {
