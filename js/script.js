@@ -26,49 +26,47 @@ const images = [
 	},
 ];
 
-const container = document.querySelector(".container");
-const btnUp = document.querySelector(".btn-up");
-const btnDown = document.querySelector(".btn-down");
+const sliderImg = document.querySelector(".container");
+const btnTop = document.querySelector(".btn-top");
+const btnBottom = document.querySelector(".btn-bottom");
 
-for(let i = 0; i < images.length; i++) {
-let imgCarusel = document.createElement("img");
-imgCarusel.src = `${images[i].image}`;
-imgCarusel.classList.add("hidden");
 
-if(i == 0) {
-    imgCarusel.classList.add("show");
-    imgCarusel.classList.remove("hidden");
+for (let i = 0; i < arrImg.length; i++) {
+    const eleImg = document.createElement("img");
+    eleImg.src = `${images[i].image}`;
+    eleImg.classList.add("slider-img");
+
+    if (images[i].image === 0) {
+        eleImg.classList.add("d-block");
+    }
+    sliderImg.append(eleImg);
 }
-container.append(imgCarusel);
-}
 
-const listImg = document.querySelectorAll(".hidden");
-const smallImg = document.querySelectorAll(".img-small");
-const firstImg = 0;
+const listImg = document.querySelectorAll(".slider-img");
+const smallImage = document.querySelectorAll(".small-img");
+let firstImg = 0;
 
-btnUp.addEventListener("click", function() {
-    listImg[firstImg].classList.remove("show");
-    smallImg[firstImg].classList.add("hidden");
+btnBottom.addEventListener("click", function(){
+    listImg[firstImg].classList.remove("d-block");
+    smallImage[firstImg].classList.remove("real-img");
     firstImg++;
-    if(firstImg == 5) {
+    if (firstImg == 5) {
         firstImg = 0;
     }
-    listImg[firstImg].classList.add("show");
-    smallImg[firstImg].classList.remove("hidden");
+    listImg[firstImg].classList.add("d-block");
+    smallImage[firstImg].classList.add("real-img");
 })
 
-btnDown.addEventListener("click", function() {
-    listImg[firstImg].classList.remove("show");
-    smallImg[firstImg].classList.add("hidden");
-    firstImg--;
-    if(firstImg == 0) {
+btnTop.addEventListener("click", function(){
+    listImg[firstImg].classList.remove("d-block");
+    smallImage[firstImg].classList.remove("real-img");
+    if (firstImg == 0) {
         firstImg = 5;
     }
-    listImg[firstImg].classList.add("show");
-    smallImg[firstImg].classList.remove("hidden");
+    firstImg--;
+    listImg[firstImg].classList.add("d-block");
+    smallImage[firstImg].classList.add("real-img");
 })
-
-
 
 
 
