@@ -68,6 +68,24 @@ btnTop.addEventListener("click", function(){
     smallImage[firstImg].classList.add("real-img");
 })
 
+const autoPlayBtn = document.querySelector(".autoplay");
+const stopBtn = document.querySelector(".stop");
+const clock = setInterval(playBtn, 3000);
+
+
+function playBtn() {
+    autoPlayBtn.addEventListener("click", function() {
+    listImg[firstImg].classList.remove("d-block");
+    smallImage[firstImg].classList.remove("real-img");
+    firstImg++;
+    if (firstImg == 5) {
+        firstImg = 0;
+    }
+    listImg[firstImg].classList.add("d-block");
+    smallImage[firstImg].classList.add("real-img");
+})
+}
+
 
 
 
