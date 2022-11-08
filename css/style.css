@@ -4,3 +4,65 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: green;
+    width: 800px;
+    height: 400px;
+    position: relative;
+    display: flex;
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-small {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: calc(100% / 5);
+}
+
+.img-small img {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls .btn-up, .controls .btn-down {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
